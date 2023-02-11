@@ -23,7 +23,7 @@ export default function FormData() {
             <form className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} />
-                <h3 className="padding bold">Kendi pizzanızı yapın</h3>
+                <h3 className="padding bold">Haydi başlayalım</h3>
                 <div>
                     <div className="grey">
                         <h3 className="padding bold">Boyut seçimi</h3>
