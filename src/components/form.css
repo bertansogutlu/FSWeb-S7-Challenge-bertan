@@ -1,13 +1,17 @@
 .formHeader {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 5%;
+    margin: 1rem auto;
 }
 
 .formHeader h2 {
-    margin-left: 3%;
     font-weight: bold;
+    width: 6rem;
+}
+
+.button {
+    width: 3rem;
 }
 
 .formBody {
@@ -42,6 +46,10 @@
 
 .half {
     width: 50%;
+}
+
+.num {
+    width: 3rem;
 }
 
 .flex {
