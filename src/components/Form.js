@@ -24,14 +24,14 @@ export default function FormData() {
 
             <div className="formBody">
 
-                <h3 className="center padding bold">Kendi Pizzanızı Yapın</h3>
+                <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} />
-                <h3 className="padding bold">Kendi Pizzanızı Yapın</h3>
+                <h3 className="padding bold">Kendi pizzanızı yapın</h3>
 
                 <form>
                     <div>
                         <div className="grey">
-                            <h3 className="padding bold">Boyut Seçimi</h3>
+                            <h3 className="padding bold">Boyut seçimi</h3>
                             <p className="padding">Gerekli</p>
                         </div>
                         <input className="margin"></input>
@@ -39,7 +39,7 @@ export default function FormData() {
 
                     <div>
                         <div className="grey">
-                            <h3 className="padding bold">Sos Seçimi</h3>
+                            <h3 className="padding bold">Sos seçimi</h3>
                             <p className="padding">Gerekli</p>
                         </div>
 
@@ -57,8 +57,8 @@ export default function FormData() {
 
                     <div>
                         <div className="grey">
-                            <h3 className="padding bold">Malzeme Seçimi</h3>
-                            <p className="padding">10 Malzemeye Kadar</p>
+                            <h3 className="padding bold">Malzeme seçimi</h3>
+                            <p className="padding">10 malzemeye kadar</p>
                         </div>
 
                         <div className="flex">
@@ -75,15 +75,23 @@ export default function FormData() {
 
                     <div>
                         <div className="grey">
-                            <h3 className="padding bold">Sağlınıza Önem Veriyoruz</h3>
-                            <p className="padding">Gulutensiz Un</p>
+                            <h3 className="padding bold">Sağlınıza önem veriyoruz</h3>
                         </div>
 
                         <label>
                             <input type="checkbox" className="margin" id="" name=""></input>
                             Gulutensiz Un
                         </label>
+                    </div>
 
+                    <div>
+                        <div className="grey">
+                            <h3 className="padding bold">Özel bir isteğiniz var mı?</h3>
+                        </div>
+
+                        <label>
+                            <textarea className="box" rid="" name=""></textarea>
+                        </label>
                     </div>
 
                 </form>
