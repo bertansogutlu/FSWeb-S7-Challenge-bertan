@@ -48,10 +48,6 @@
     width: 50%;
 }
 
-.num {
-    width: 3rem;
-}
-
 .flex {
     display: flex;
     flex-wrap: wrap;

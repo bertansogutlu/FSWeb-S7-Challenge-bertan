@@ -91,7 +91,7 @@ export default function FormData() {
 
                 <div>
                     <label>
-                        <input type="number" min="1" max="10" className="margin num"></input>
+                        <input type="number" min="1" max="10" className="margin"></input>
                     </label>
 
                     <label>
