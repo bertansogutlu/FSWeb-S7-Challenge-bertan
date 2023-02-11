@@ -29,7 +29,12 @@ export default function FormData() {
                         <h3 className="padding bold">Boyut seçimi</h3>
                         <p className="padding">Gerekli</p>
                     </div>
-                    <input className="margin"></input>
+                    <select className="margin" id="select">
+                        <option >Küçük</option>
+                        <option >Orta</option>
+                        <option >Büyük</option>
+                        <option >Canavar</option>
+                    </select>
                 </div>
 
                 <div>
@@ -95,7 +100,7 @@ export default function FormData() {
                     </label>
 
                     <label>
-                        <button  className="margin" id="" name="">Siparişi tamamla</button>
+                        <button className="margin" id="" name="">Siparişi tamamla</button>
                     </label>
                 </div>
 
