@@ -1,5 +1,5 @@
 import React from "react"
-
+import pizzaImg from "../img/Pizza.png"
 
 export default function FormData() {
 
@@ -17,18 +17,15 @@ export default function FormData() {
                 </div>
 
             </div>
+
             <div className="formBody">
                 <div>
                     <h3>Build Your Own Pizza</h3>
                 </div>
+                <img src={pizzaImg}/>
+
                 <div>
                     <form>
-
-
-
-
-
-
 
                     </form>
                 </div>
