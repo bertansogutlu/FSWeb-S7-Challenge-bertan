@@ -1,0 +1,51 @@
+.formHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5%;
+}
+
+.formHeader h2 {
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+.formBody {
+    margin: auto;
+    width: 50%;
+    border: 0.1rem solid black;
+}
+
+.formBody img {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin {
+    margin: 0.5rem;
+}
+
+.padding {
+    padding: 0.5rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.grey {
+    background-color: #bfbebe;
+}
+
+.half {
+    width: 50%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
