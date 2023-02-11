@@ -47,7 +47,7 @@ export default function FormData() {
                         {soslar.map((e, i) =>
                             <div>
                                 <label>
-                                    <input type="radio" id={`radio-${i}`} name={e} className="margin"></input>
+                                    <input type="radio" id={`radio-${i}`} name="sos" className="margin"></input>
                                     {e}
                                 </label>
                             </div>
