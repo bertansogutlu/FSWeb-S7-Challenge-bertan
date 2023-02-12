@@ -21,7 +21,7 @@ export default function Main() {
             </div>
 
             <div className="mainPhoto">
-                <img src={pizzaImg} />
+                <img src={pizzaImg} alt="pizza fotoğrafı"/>
                 <Link to="/pizza">
                 <div class="centered">Favori restorana git</div>
                 </Link>
@@ -30,7 +30,7 @@ export default function Main() {
             <div className="mainBody">
             {restoranlar.map((e, i) =>
                             <div>
-                                <img src={`https://picsum.photos/id/${i}/400/300`} className="margin"/>
+                                <img src={`https://picsum.photos/id/${i}/400/300`} className="margin" alt={`{e} fotoğrafı`}/>
                                 <div>
                                 <h3 className="margin bold">{e}</h3>
                                 <button id={`button-${i}`} name={e} className="margin">Restorana git</button>

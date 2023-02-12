@@ -7,6 +7,8 @@ const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeyti
 
 export default function FormData() {
 
+    const initial = {isim : '', boyut : '', sos:'', malzeme1 : '', malzeme2 : '', malzeme3 : '', malzeme4 : '', malzeme5 : '', gulutensiz: '', özel: ''};
+
     return (
         <section className="form">
             <div className="formHeader">
@@ -24,7 +26,7 @@ export default function FormData() {
             </div>
             <form id="pizza-form" className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
-                <img src={pizzaImg} />
+                <img src={pizzaImg} alt="pizza fotoğrafı"/>
                 <h3 className="padding bold">Haydi başlayalım</h3>
 
                 <div>
@@ -33,7 +35,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input id="name-input" type="text" className="margin" id="" name=""></input>
+                        <input id="name-input" type="text" className="margin" name=""></input>
                     </label>
                 </div>
 
