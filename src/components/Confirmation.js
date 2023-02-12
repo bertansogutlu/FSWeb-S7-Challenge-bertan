@@ -9,7 +9,7 @@ export default function Confirmation() {
 
             <div className="mainPhoto">
                 <img src={pizzaImg} alt="pizza fotoğrafı"/>
-                <div class="centered">Siparişiniz alındı</div>
+                <div class="centered">Tebrikler! Pizza'nız yola çıktı</div>
             </div>
 
         </section>
