@@ -6,7 +6,7 @@ import pizzaImg from "../img/Pizza.jpg"
 export default function MainHeader() {
 
     return (
-            <div className="mainHeader">
+            <div className="header">
                   <h2>Techno Eats</h2>
                 <div>
                     <Link to="/">

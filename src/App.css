@@ -51,19 +51,6 @@ table {
 
 
 
-
-.formHeader {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1rem auto;
-}
-
-.formHeader h2 {
-    font-weight: bold;
-    width: 12rem;
-}
-
 .formBody {
     margin: auto;
     width: 50%;
@@ -119,14 +106,14 @@ table {
 
 
 
-.mainHeader {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1rem 3rem;
 }
 
-.mainHeader h2 {
+.header h2 {
     font-weight: bold;
     width: 6rem;
 }
