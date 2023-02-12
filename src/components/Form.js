@@ -10,7 +10,7 @@ export default function FormData() {
 
     const initial = {isim : '', boyut : '', sos:'', malzeme1 : false, malzeme2 : false, malzeme3 : false, malzeme4 : false, malzeme5 : false, malzeme6 : false, malzeme7 : false, malzeme8 : false, malzeme9 : false, malzeme10 : false, un: false, özel: '', adet : 0};
     const [siparis, setSiparis] = useState(initial);
-    const {isim, boyut, sos, malzeme1, malzeme2, malzeme3, malzeme4, malzeme5, un, özel, adet} = siparis;
+    const {isim, boyut, sos, un, özel, adet} = siparis;
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
