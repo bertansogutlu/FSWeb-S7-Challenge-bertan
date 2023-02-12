@@ -43,7 +43,7 @@ export default function FormData() {
                     </button>
                 </div>
             </div>
-            <form onSubmit={submit} id="pizza-form" className="formBody">
+            <form onSubmit={submit} className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} alt="pizza fotoğrafı"/>
                 <h3 className="padding bold">Haydi başlayalım</h3>
@@ -54,7 +54,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input type="text" id="name-input" className="margin" name="isim" value={isim} onChange={handleChange}/>
+                        <input type="text" className="margin" name="isim" value={isim} onChange={handleChange}/>
                     </label>
                 </div>
 
@@ -64,7 +64,7 @@ export default function FormData() {
                         <p className="padding">Gerekli</p>
                     </div>
 
-                    <select id="select" className="margin" name="boyut" value={boyut} onChange={handleChange}>
+                    <select className="margin" name="boyut" value={boyut} onChange={handleChange}>
                         <option >Küçük</option>
                         <option >Orta</option>
                         <option >Büyük</option>
@@ -81,7 +81,7 @@ export default function FormData() {
                         {soslar.map((e, i) =>
                             <div>
                                 <label>
-                                    <input type="radio" id={`radio-${i}`} className="margin" name="sos" value={e} checked={sos === `${e}`} onChange={handleChange}/>
+                                    <input type="radio" className="margin" name="sos" value={e} checked={sos === `${e}`} onChange={handleChange}/>
                                     {e}
                                 </label>
                             </div>
@@ -99,7 +99,7 @@ export default function FormData() {
                         {malzemeler.map((e, i) =>
                             <div className="half">
                                 <label>
-                                    <input type="checkbox" id={`radio-${i+1}`} className="margin" name={`malzeme${i+1}`} value={e} checked={siparis[`malzeme${i+1}`]} onChange={handleChange}/>
+                                    <input type="checkbox" className="margin" name={`malzeme${i+1}`} value={e} checked={siparis[`malzeme${i+1}`]} onChange={handleChange}/>
                                     {e}
                                 </label>
                             </div>
@@ -136,7 +136,7 @@ export default function FormData() {
                     <label>
                         <button type="submit" className="margin">Siparişi tamamla</button>
                     </label>
-                    <button type="button" id="reset-id" onClick={reset}>Temizle</button>
+                    <button type="button" onClick={reset}>Temizle</button>
 
                 </div>
 
