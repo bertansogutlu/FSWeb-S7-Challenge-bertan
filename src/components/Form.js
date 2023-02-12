@@ -22,15 +22,27 @@ export default function FormData() {
                     </button>
                 </div>
             </div>
-            <form className="formBody">
+            <form id="pizza-form" className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} />
                 <h3 className="padding bold">Haydi başlayalım</h3>
+
+                <div>
+                    <div className="grey">
+                        <h3 className="padding bold">İsminiz</h3>
+                    </div>
+
+                    <label>
+                        <input type="text" className="margin" id="" name=""></input>
+                    </label>
+                </div>
+
                 <div>
                     <div className="grey">
                         <h3 className="padding bold">Boyut seçimi</h3>
                         <p className="padding">Gerekli</p>
                     </div>
+                    
                     <select className="margin" id="select">
                         <option >Küçük</option>
                         <option >Orta</option>
