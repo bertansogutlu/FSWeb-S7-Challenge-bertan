@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
 import Form from "./components/Form";
+import Main from "./components/Main";
 import { BrowserRouter, Route } from "react-router-dom";
+
 
 const App = () => {
   return (
     <BrowserRouter>
       <Route exact path="/">
-        <h1>Teknolojik Yemekler</h1>
-        <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
+        <Main/>
       </Route>
       <Route exact path="/pizza">
         <Form/>

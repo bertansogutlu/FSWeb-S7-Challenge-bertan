@@ -45,3 +45,89 @@ table {
 * {
 	box-sizing: border-box;
 }
+
+
+
+
+
+
+
+.formHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.formHeader h2 {
+    font-weight: bold;
+    width: 6rem;
+}
+
+.formBody {
+    margin: auto;
+    width: 50%;
+    min-width: 300px;
+    border: 0.1rem solid black;
+}
+
+.formBody img {
+    width: 100%;
+}
+
+.button {
+    width: 3rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin {
+    margin: 0.5rem;
+}
+
+.padding {
+    padding: 0.5rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.grey {
+    background-color: #bfbebe;
+}
+
+.half {
+    width: 50%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    margin: 0.5rem;
+    width: 80%;
+    height: 5rem;
+    text-align: center;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 3rem;
+}
+
+.mainHeader h2 {
+    font-weight: bold;
+    width: 6rem;
+}
+
+.mainPhoto img {
+    width: 100%;
+	height: 50vh;
+}
