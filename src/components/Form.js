@@ -49,7 +49,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input id="name-input" type="text" className="margin" name="isim" value={isim} onChange={handleChange}/>
+                        <input type="text" id="name-input" className="margin" name="isim" value={isim} onChange={handleChange}/>
                     </label>
                 </div>
 
@@ -59,7 +59,7 @@ export default function FormData() {
                         <p className="padding">Gerekli</p>
                     </div>
 
-                    <select className="margin" id="select" name="boyut" onChange={handleChange}>
+                    <select id="select" className="margin" name="boyut" onChange={handleChange}>
                         <option >Küçük</option>
                         <option >Orta</option>
                         <option >Büyük</option>
@@ -76,7 +76,7 @@ export default function FormData() {
                         {soslar.map((e, i) =>
                             <div>
                                 <label>
-                                    <input type="radio" id={`radio-${i}`} name="sos" className="margin" value={e} checked={sos === `${e}`} onChange={handleChange}/>
+                                    <input type="radio" id={`radio-${i}`} className="margin" name="sos" value={e} checked={sos === `${e}`} onChange={handleChange}/>
                                     {e}
                                 </label>
                             </div>
@@ -94,7 +94,7 @@ export default function FormData() {
                         {malzemeler.map((e, i) =>
                             <div className="half">
                                 <label>
-                                    <input type="checkbox" className="margin" id={`radio-${i}`} name={`malzeme${i+1}`} onChange={handleChange}/>
+                                    <input type="checkbox" id={`radio-${i}`} className="margin" name={`malzeme${i+1}`} value={e} onChange={handleChange}/>
                                     {e}
                                 </label>
                             </div>
@@ -108,7 +108,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input type="checkbox" className="margin" id="" name="gluten" onChange={handleChange}/>
+                        <input type="checkbox" className="margin" name="gluten" onChange={handleChange}/>
                         Gulutensiz Un
                     </label>
                 </div>
@@ -125,11 +125,11 @@ export default function FormData() {
 
                 <div>
                     <label>
-                        <input name="adet" type="number" min="1" max="10" className="margin" onChange={handleChange}/>
+                        <input type="number" name="adet" min="1" max="10" className="margin" onChange={handleChange}/>
                     </label>
 
                     <label>
-                        <button type="submit" className="margin" id="" name="">Siparişi tamamla</button>
+                        <button type="submit" className="margin">Siparişi tamamla</button>
                     </label>
                 </div>
 
