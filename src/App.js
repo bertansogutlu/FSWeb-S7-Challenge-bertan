@@ -1,9 +1,10 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Form from "./components/Form";
 import Main from "./components/Main";
 import MainHeader from "./components/Header"
-import { BrowserRouter, Route } from "react-router-dom";
+import Confirmation from "./components/Confirmation";
 
 
 const App = () => {
@@ -15,6 +16,9 @@ const App = () => {
       </Route>
       <Route exact path="/pizza">
         <Form />
+      </Route>
+      <Route exact path="/confirmation">
+        <Confirmation />
       </Route>
     </BrowserRouter>
   );

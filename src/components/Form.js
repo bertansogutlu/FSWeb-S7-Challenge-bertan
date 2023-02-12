@@ -8,8 +8,8 @@ const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinya�
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
 
 const formSchema = Yup.object({
-    isim: Yup.string().required("Bu alan gereklidir").min(2,"İsim en az 2 karakter olmalıdır")
-  });
+    isim: Yup.string().required("Bu alan gereklidir").min(2, "İsim en az 2 karakter olmalıdır")
+});
 
 
 
@@ -21,15 +21,15 @@ export default function FormData() {
     const { isim, boyut, sos, un, özel, adet } = siparis;
 
     function handleError(name, value) {
-        
+
         Yup.reach(formSchema, name)
-        .validate(value)
-        .then(() => {
-            setIsimError("")
-        })
-        .catch((err) => {
-            setIsimError(err.errors)
-        })
+            .validate(value)
+            .then(() => {
+                setIsimError("")
+            })
+            .catch((err) => {
+                setIsimError(err.errors)
+            })
     }
 
     console.log(isimError)
@@ -49,13 +49,13 @@ export default function FormData() {
 
     function submit(event) {
         event.preventDefault();
-        
-        
+
+
     }
 
     return (
         <section className="form">
-          
+
             <form onSubmit={submit} className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} alt="pizza fotoğrafı" />
@@ -68,7 +68,7 @@ export default function FormData() {
 
                     <label>
                         <input type="text" className="margin" name="isim" value={isim} onChange={handleChange} />
-                        <p className="margin" style={{color: "red"}}>{isimError}</p>
+                        <p className="margin" style={{ color: "red" }}>{isimError}</p>
                     </label>
                 </div>
 
@@ -143,15 +143,11 @@ export default function FormData() {
                 </div>
 
                 <div>
-                    <label>
-                        <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
-                    </label>
-
-                    <label>
+                    <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
+                    <Link to="/confirmation">
                         <button type="submit" className="margin">Siparişi tamamla</button>
-                    </label>
+                    </Link>
                     <button type="button" onClick={reset}>Temizle</button>
-
                 </div>
 
             </form>
