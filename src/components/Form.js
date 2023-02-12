@@ -28,7 +28,7 @@ export default function FormData() {
             setIsimError("")
         })
         .catch((err) => {
-            setIsimError(err.errors[0])
+            setIsimError(err.errors)
         })
     }
 
@@ -48,7 +48,9 @@ export default function FormData() {
     console.log(siparis)
 
     function submit(event) {
-
+        event.preventDefault();
+        
+        
     }
 
     return (
@@ -78,6 +80,7 @@ export default function FormData() {
 
                     <label>
                         <input type="text" className="margin" name="isim" value={isim} onChange={handleChange} />
+                        <p className="margin" style={{color: "red"}}>{isimError}</p>
                     </label>
                 </div>
 
