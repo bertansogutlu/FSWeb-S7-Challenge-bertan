@@ -61,7 +61,7 @@ table {
 
 .formHeader h2 {
     font-weight: bold;
-    width: 6rem;
+    width: 12rem;
 }
 
 .formBody {
@@ -77,7 +77,8 @@ table {
 }
 
 .button {
-    width: 3rem;
+    width: 4rem;
+	margin: 0.5rem;
 }
 
 .center {
@@ -135,6 +136,17 @@ table {
 	height: 50vh;
 	margin-bottom: 5vh;
 }
+
+.mainPhoto .centered {
+	color: white;
+	font-size: 3rem;
+	padding: 1rem;
+	background-color: rgb(0, 0, 0, 0.5);
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
 
 .mainBody {
     display: flex;

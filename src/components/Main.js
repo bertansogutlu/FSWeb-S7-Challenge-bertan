@@ -21,6 +21,7 @@ export default function Main() {
 
             <div className="mainPhoto">
                 <img src={pizzaImg} />
+                <div class="centered">Favori restorana git</div>
             </div>
 
             <div className="mainBody">
@@ -29,7 +30,7 @@ export default function Main() {
                                 <img src={`https://picsum.photos/id/${i}/400/300`} className="margin"/>
                                 <div>
                                 <h3 className="margin bold">{e}</h3>
-                                <button id={`button-${i}`} name="sos" className="margin">Restorana git</button>
+                                <button id={`button-${i}`} name={e} className="margin">Restorana git</button>
                                 </div>
                             </div>
                         )}
