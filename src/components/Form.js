@@ -99,7 +99,7 @@ export default function FormData() {
                         {malzemeler.map((e, i) =>
                             <div className="half">
                                 <label>
-                                    <input type="checkbox" id={`radio-${i}`} className="margin" name={`malzeme${i+1}`} value={e} onChange={handleChange}/>
+                                    <input type="checkbox" id={`radio-${i+1}`} className="margin" name={`malzeme${i+1}`} value={e} onChange={handleChange}/>
                                     {e}
                                 </label>
                             </div>
