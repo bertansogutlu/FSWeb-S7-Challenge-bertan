@@ -8,7 +8,7 @@ const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinya�
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
 
 const formSchema = Yup.object({
-    isim: Yup.string().required("Gerekli").min(2,"İsim en az 2 karakter olmalıdır")
+    isim: Yup.string().required("Bu alan gereklidir").min(2,"İsim en az 2 karakter olmalıdır")
   });
 
 
@@ -25,13 +25,14 @@ export default function FormData() {
         Yup.reach(formSchema, name)
         .validate(value)
         .then(() => {
-            console.log("Isim gecerli")
+            setIsimError("")
         })
         .catch((err) => {
             setIsimError(err.errors[0])
         })
-        console.log(isimError)
     }
+
+    console.log(isimError)
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
