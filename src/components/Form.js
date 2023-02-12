@@ -8,9 +8,9 @@ const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeyti
 
 export default function FormData() {
 
-    const initial = {isim : '', boyut : '', sos:'', malzeme1 : '', malzeme2 : '', malzeme3 : '', malzeme4 : '', malzeme5 : '', gulutensiz: '', özel: ''};
+    const initial = {isim : '', boyut : '', sos:'', malzeme1 : '', malzeme2 : '', malzeme3 : '', malzeme4 : '', malzeme5 : '', un: false, özel: ''};
     const [siparis, setSiparis] = useState(initial);
-    const {isim, boyut, sos, malzeme1, malzeme2, malzeme3, malzeme4, malzeme5, gulutensiz, özel} = siparis;
+    const {isim, boyut, sos, malzeme1, malzeme2, malzeme3, malzeme4, malzeme5, un, özel} = siparis;
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
@@ -108,8 +108,8 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input type="checkbox" className="margin" name="gluten" onChange={handleChange}/>
-                        Gulutensiz Un
+                        <input type="checkbox" className="margin" name="un" value="glutensiz" checked={un} onChange={handleChange}/>
+                        Gulutensiz un
                     </label>
                 </div>
 
