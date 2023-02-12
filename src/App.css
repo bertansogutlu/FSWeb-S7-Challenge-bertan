@@ -51,17 +51,7 @@ table {
 
 
 
-.formBody {
-    margin: auto;
-    width: 50%;
-    min-width: 300px;
-    border: 0.1rem solid black;
-	margin-bottom: 5vh;
-}
 
-.formBody img {
-    width: 100%;
-}
 
 .button {
     width: 4rem;
@@ -140,4 +130,16 @@ table {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin-bottom: 5vh;
+}
+
+.formBody {
+    margin: auto;
+    width: 50%;
+    min-width: 300px;
+    border: 0.1rem solid black;
+	margin-bottom: 5vh;
+}
+
+.formBody img {
+    width: 100%;
 }
