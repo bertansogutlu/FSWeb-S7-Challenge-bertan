@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import pizzaImg from "../img/Pizza.png"
 
 const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinyağı']
@@ -11,9 +12,11 @@ export default function FormData() {
             <div className="formHeader">
                 <h2>Techno Eats</h2>
                 <div>
-                    <button className="button">
-                        Home
-                    </button>
+                    <Link to="/">
+                        <button className="button">
+                            Home
+                        </button>
+                    </Link>
                     <button className="button">
                         Help
                     </button>

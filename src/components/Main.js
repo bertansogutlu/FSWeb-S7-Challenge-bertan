@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import pizzaImg from "../img/Pizza.jpg"
 
 const restoranlar = ["McDonals's", "Dominos", "Burger King", "Pizza Hot", "Kentucky Fried Chicken", "Starbucks"]
@@ -21,7 +22,9 @@ export default function Main() {
 
             <div className="mainPhoto">
                 <img src={pizzaImg} />
+                <Link to="/pizza">
                 <div class="centered">Favori restorana git</div>
+                </Link>
             </div>
 
             <div className="mainBody">
