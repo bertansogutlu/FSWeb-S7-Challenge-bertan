@@ -2,18 +2,40 @@ import React from "react"
 import { Link } from "react-router-dom"
 import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
+import * as Yup from 'yup';
 
 const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinyağı']
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
+
+const formSchema = Yup.object({
+    isim: Yup.string().required("Gerekli").min(2,"İsim en az 2 karakter olmalıdır")
+  });
+
+
 
 export default function FormData() {
 
     const initial = { isim: '', boyut: '', sos: '', malzeme1: false, malzeme2: false, malzeme3: false, malzeme4: false, malzeme5: false, malzeme6: false, malzeme7: false, malzeme8: false, malzeme9: false, malzeme10: false, un: false, özel: '', adet: 0 };
     const [siparis, setSiparis] = useState(initial);
+    const [isimError, setIsimError] = useState([])
     const { isim, boyut, sos, un, özel, adet } = siparis;
+
+    function handleError(name, value) {
+        
+        Yup.reach(formSchema, name)
+        .validate(value)
+        .then(() => {
+            console.log("Isim gecerli")
+        })
+        .catch((err) => {
+            setIsimError(err.errors[0])
+        })
+        console.log(isimError)
+    }
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
+        event.target.name === "isim" && handleError(event.target.name, event.target.value)
         setSiparis({ ...siparis, [event.target.name]: event.target.type === "checkbox" ? event.target.checked : event.target.value })
     }
 
