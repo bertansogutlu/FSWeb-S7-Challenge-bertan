@@ -14,7 +14,10 @@ export default function FormData() {
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
+        setSiparis({...siparis, [event.target.name] : event.target.type === "checkbox" ? event.target.checked : event.target.value})
     }
+
+    console.log(siparis)
 
     function submit(event) {
        
@@ -46,7 +49,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input id="name-input" type="text" className="margin" name="isim" onChange={handleChange}/>
+                        <input id="name-input" type="text" className="margin" name="isim" value={isim} onChange={handleChange}/>
                     </label>
                 </div>
 
@@ -73,7 +76,7 @@ export default function FormData() {
                         {soslar.map((e, i) =>
                             <div>
                                 <label>
-                                    <input type="radio" id={`radio-${i}`} name="sos" className="margin" onChange={handleChange}/>
+                                    <input type="radio" id={`radio-${i}`} name="sos" className="margin" value={e} checked={sos === `${e}`} onChange={handleChange}/>
                                     {e}
                                 </label>
                             </div>
