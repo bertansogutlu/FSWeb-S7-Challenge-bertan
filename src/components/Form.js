@@ -8,13 +8,13 @@ const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeyti
 
 export default function FormData() {
 
-    const initial = {isim : '', boyut : '', sos:'', malzeme1 : false, malzeme2 : false, malzeme3 : false, malzeme4 : false, malzeme5 : false, malzeme6 : false, malzeme7 : false, malzeme8 : false, malzeme9 : false, malzeme10 : false, un: false, özel: '', adet : 0};
+    const initial = { isim: '', boyut: '', sos: '', malzeme1: false, malzeme2: false, malzeme3: false, malzeme4: false, malzeme5: false, malzeme6: false, malzeme7: false, malzeme8: false, malzeme9: false, malzeme10: false, un: false, özel: '', adet: 0 };
     const [siparis, setSiparis] = useState(initial);
-    const {isim, boyut, sos, un, özel, adet} = siparis;
+    const { isim, boyut, sos, un, özel, adet } = siparis;
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
-        setSiparis({...siparis, [event.target.name] : event.target.type === "checkbox" ? event.target.checked : event.target.value})
+        setSiparis({ ...siparis, [event.target.name]: event.target.type === "checkbox" ? event.target.checked : event.target.value })
     }
 
     function reset() {
@@ -25,7 +25,7 @@ export default function FormData() {
     console.log(siparis)
 
     function submit(event) {
-       
+
     }
 
     return (
@@ -45,7 +45,7 @@ export default function FormData() {
             </div>
             <form onSubmit={submit} className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
-                <img src={pizzaImg} alt="pizza fotoğrafı"/>
+                <img src={pizzaImg} alt="pizza fotoğrafı" />
                 <h3 className="padding bold">Haydi başlayalım</h3>
 
                 <div>
@@ -54,7 +54,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input type="text" className="margin" name="isim" value={isim} onChange={handleChange}/>
+                        <input type="text" className="margin" name="isim" value={isim} onChange={handleChange} />
                     </label>
                 </div>
 
@@ -81,7 +81,7 @@ export default function FormData() {
                         {soslar.map((e, i) =>
                             <div>
                                 <label>
-                                    <input type="radio" className="margin" name="sos" value={e} checked={sos === `${e}`} onChange={handleChange}/>
+                                    <input type="radio" className="margin" name="sos" value={e} checked={sos === `${e}`} onChange={handleChange} />
                                     {e}
                                 </label>
                             </div>
@@ -99,7 +99,7 @@ export default function FormData() {
                         {malzemeler.map((e, i) =>
                             <div className="half">
                                 <label>
-                                    <input type="checkbox" className="margin" name={`malzeme${i+1}`} value={e} checked={siparis[`malzeme${i+1}`]} onChange={handleChange}/>
+                                    <input type="checkbox" className="margin" name={`malzeme${i + 1}`} value={e} checked={siparis[`malzeme${i + 1}`]} onChange={handleChange} />
                                     {e}
                                 </label>
                             </div>
@@ -113,7 +113,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input type="checkbox" className="margin" name="un" value="glutensiz" checked={un} onChange={handleChange}/>
+                        <input type="checkbox" className="margin" name="un" value="glutensiz" checked={un} onChange={handleChange} />
                         Gulutensiz un
                     </label>
                 </div>
@@ -124,13 +124,13 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <textarea className="box" name="özel" value={özel} onChange={handleChange}/>
+                        <textarea className="box" name="özel" value={özel} onChange={handleChange} />
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange}/>
+                        <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
                     </label>
 
                     <label>
