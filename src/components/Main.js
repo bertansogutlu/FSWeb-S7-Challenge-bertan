@@ -8,17 +8,6 @@ export default function Main() {
 
     return (
         <section className="main">
-            <div className="mainHeader">
-                <h2>Techno</h2>
-                <div>
-                    <button className="button">
-                        Home
-                    </button>
-                    <button className="button">
-                        Help
-                    </button>
-                </div>
-            </div>
 
             <div className="mainPhoto">
                 <img src={pizzaImg} alt="pizza fotoğrafı"/>

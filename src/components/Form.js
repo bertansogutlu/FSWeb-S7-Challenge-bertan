@@ -55,19 +55,7 @@ export default function FormData() {
 
     return (
         <section className="form">
-            <div className="formHeader">
-                <h2>Techno Eats</h2>
-                <div>
-                    <Link to="/">
-                        <button className="button">
-                            Home
-                        </button>
-                    </Link>
-                    <button className="button">
-                        Help
-                    </button>
-                </div>
-            </div>
+          
             <form onSubmit={submit} className="formBody">
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} alt="pizza fotoğrafı" />
