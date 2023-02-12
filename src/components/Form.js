@@ -33,7 +33,6 @@ export default function FormData() {
                         <option >Küçük</option>
                         <option >Orta</option>
                         <option >Büyük</option>
-                        <option >Canavar</option>
                     </select>
                 </div>
 
