@@ -33,7 +33,7 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <input type="text" className="margin" id="" name=""></input>
+                        <input id="name-input" type="text" className="margin" id="" name=""></input>
                     </label>
                 </div>
 
@@ -42,7 +42,7 @@ export default function FormData() {
                         <h3 className="padding bold">Boyut seçimi</h3>
                         <p className="padding">Gerekli</p>
                     </div>
-                    
+
                     <select className="margin" id="select">
                         <option >Küçük</option>
                         <option >Orta</option>
