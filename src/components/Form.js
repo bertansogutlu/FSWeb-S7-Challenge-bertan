@@ -8,9 +8,9 @@ const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeyti
 
 export default function FormData() {
 
-    const initial = {isim : '', boyut : '', sos:'', malzeme1 : false, malzeme2 : false, malzeme3 : false, malzeme4 : false, malzeme5 : false, malzeme6 : false, malzeme7 : false, malzeme8 : false, malzeme9 : false, malzeme10 : false, un: false, özel: ''};
+    const initial = {isim : '', boyut : '', sos:'', malzeme1 : false, malzeme2 : false, malzeme3 : false, malzeme4 : false, malzeme5 : false, malzeme6 : false, malzeme7 : false, malzeme8 : false, malzeme9 : false, malzeme10 : false, un: false, özel: '', adet : 0};
     const [siparis, setSiparis] = useState(initial);
-    const {isim, boyut, sos, malzeme1, malzeme2, malzeme3, malzeme4, malzeme5, un, özel} = siparis;
+    const {isim, boyut, sos, malzeme1, malzeme2, malzeme3, malzeme4, malzeme5, un, özel, adet} = siparis;
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
@@ -64,7 +64,7 @@ export default function FormData() {
                         <p className="padding">Gerekli</p>
                     </div>
 
-                    <select id="select" className="margin" name="boyut" onChange={handleChange}>
+                    <select id="select" className="margin" name="boyut" value={boyut} onChange={handleChange}>
                         <option >Küçük</option>
                         <option >Orta</option>
                         <option >Büyük</option>
@@ -124,13 +124,13 @@ export default function FormData() {
                     </div>
 
                     <label>
-                        <textarea className="box" name="özel" onChange={handleChange}/>
+                        <textarea className="box" name="özel" value={özel} onChange={handleChange}/>
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="number" name="adet" min="1" max="10" className="margin" onChange={handleChange}/>
+                        <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange}/>
                     </label>
 
                     <label>
