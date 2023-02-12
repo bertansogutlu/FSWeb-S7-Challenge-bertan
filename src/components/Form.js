@@ -17,6 +17,11 @@ export default function FormData() {
         setSiparis({...siparis, [event.target.name] : event.target.type === "checkbox" ? event.target.checked : event.target.value})
     }
 
+    function reset() {
+        setSiparis(initial)
+        console.log(siparis)
+    }
+
     console.log(siparis)
 
     function submit(event) {
@@ -131,6 +136,8 @@ export default function FormData() {
                     <label>
                         <button type="submit" className="margin">Siparişi tamamla</button>
                     </label>
+                    <button type="button" id="reset-id" onClick={reset}>Temizle</button>
+
                 </div>
 
             </form>
