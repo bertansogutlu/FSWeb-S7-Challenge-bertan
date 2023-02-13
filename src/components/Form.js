@@ -65,6 +65,7 @@ export default function FormData() {
         <section className="form">
 
             <form onSubmit={submit} className="formBody">
+
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
                 <img src={pizzaImg} alt="pizza fotoğrafı" />
                 <h3 className="padding bold">Haydi başlayalım</h3>
@@ -157,8 +158,9 @@ export default function FormData() {
                     </Link>
                     <button type="button" onClick={reset}>Temizle</button>
                 </div>
-
+                
             </form>
+
         </section>
     )
 }
