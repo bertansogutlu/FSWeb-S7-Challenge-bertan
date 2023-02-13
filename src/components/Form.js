@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import axios from "axios"
 import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
 import * as Yup from 'yup';
@@ -50,6 +51,13 @@ export default function FormData() {
     function submit(event) {
         event.preventDefault();
 
+        axios.post('https://reqres.in/api/orders', siparis)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
 
     }
 
