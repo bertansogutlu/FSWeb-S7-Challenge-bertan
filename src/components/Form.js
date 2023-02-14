@@ -79,7 +79,6 @@ export default function FormData({siparisData, setSiparisData}) {
           .then(function (response) {
             console.log(response);
             setSiparisData(response.data)
-            console.log(siparisData);
             history.push('/confirmation');
           })
           .catch(function (error) {

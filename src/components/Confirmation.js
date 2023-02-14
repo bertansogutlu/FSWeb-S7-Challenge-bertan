@@ -9,9 +9,14 @@ export default function Confirmation({siparisData}) {
 
             <div className="mainPhoto">
                 <img src={pizzaImg} alt="pizza fotoğrafı"/>
-                <div class="centered">Tebrikler! Pizza'nız yola çıktı</div>
+                <div class="centered">Tebrikler {siparisData.isim}! Pizzan yola çıktı</div>
             </div>
-            <div>Hey {siparisData.isim}</div>
+            <div> 
+                Sipariş adedi: {siparisData.adet}
+                Pizza boyutu: {siparisData.boyut}
+                Pizza sosu: {siparisData.sos}
+                Özel istek: {siparisData["özel"]}
+            </div>
         </section>
     )
 }
