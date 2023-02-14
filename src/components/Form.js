@@ -13,6 +13,7 @@ const formSchema = Yup.object({
     isim: Yup
     .string()
     .required("Bu alan zorunludur")
+    .min(2,"İsim en az 2 karakter olmalıdır")
     .matches(
         /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
         'Sadece latin harfleri kullanınız'
