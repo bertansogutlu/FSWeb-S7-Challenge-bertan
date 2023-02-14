@@ -46,12 +46,19 @@
 
 .box {
     margin: 0.5rem;
+    padding: 0.5rem;
     width: 80%;
     height: 5rem;
-    text-align: center;
+    border-color: #ea004b;
+    border-radius: 0.5rem;
 }
 
-
+.input {
+    margin: 2rem;
+    scale: 2;
+    border-color: #ea004b;
+    border-radius: 0.5rem;
+}
 
 .header {
     display: flex;

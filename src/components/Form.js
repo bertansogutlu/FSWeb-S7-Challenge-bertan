@@ -177,9 +177,9 @@ export default function FormData({ setSiparisData }) {
                 </div>
 
                 <div>
-                    <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
-                    <button type="submit" className="margin" disabled={buttonDisable}>Siparişi tamamla</button>
-                    <button type="button" onClick={reset}>Temizle</button>
+                    <input type="number" className="input" name="adet" min="0" max="10" value={adet} onChange={handleChange} />
+                    <button type="submit" className="button" disabled={buttonDisable}>Siparişi tamamla</button>
+                    <button type="button" className="button" onClick={reset}>Temizle</button>
                 </div>
 
             </form>
