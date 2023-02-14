@@ -4,25 +4,25 @@ import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
 import { useEffect } from "react"
 import * as Yup from 'yup';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinyağı']
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
 
 const siparisSchema = Yup.object({
     isim: Yup
-    .string()
-    .required("Bu alan zorunludur")
-    .min(2,"İsim en az 2 karakter olmalıdır")
-    .matches(
-        /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
-        'Sadece latin harfleri kullanınız'
-    ),
+        .string()
+        .required("Bu alan zorunludur")
+        .min(2, "İsim en az 2 karakter olmalıdır")
+        .matches(
+            /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+            'Sadece latin harfleri kullanınız'
+        ),
 });
 
 
 
-export default function FormData({siparisData, setSiparisData}) {
+export default function FormData({ siparisData, setSiparisData }) {
 
     const initial = { isim: '', boyut: '', sos: '', malzeme1: false, malzeme2: false, malzeme3: false, malzeme4: false, malzeme5: false, malzeme6: false, malzeme7: false, malzeme8: false, malzeme9: false, malzeme10: false, un: false, özel: '', adet: 0 };
     const [siparis, setSiparis] = useState(initial);
@@ -76,14 +76,14 @@ export default function FormData({siparisData, setSiparisData}) {
         event.preventDefault();
 
         axios.post('https://reqres.in/api/orders', siparis)
-          .then(function (response) {
-            console.log(response);
-            setSiparisData(response.data)
-            history.push('/confirmation');
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+            .then(function (response) {
+                console.log(response);
+                setSiparisData(response.data);
+                history.push('/confirmation');
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
 
     }
 
@@ -179,10 +179,10 @@ export default function FormData({siparisData, setSiparisData}) {
 
                 <div>
                     <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
-                        <button type="submit" className="margin" disabled={buttonDisable}>Siparişi tamamla</button>
+                    <button type="submit" className="margin" disabled={buttonDisable}>Siparişi tamamla</button>
                     <button type="button" onClick={reset}>Temizle</button>
                 </div>
-                
+
             </form>
 
         </section>
