@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinyağı']
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
 
-const formSchema = Yup.object({
+const siparisSchema = Yup.object({
     isim: Yup
     .string()
     .required("Bu alan zorunludur")
@@ -30,7 +30,7 @@ export default function FormData() {
     const [buttonDisable, setButtonDisable] = useState(true);
 
     useEffect(() => {
-        formSchema.isValid(siparis).then((valid) => setButtonDisable(!valid));
+        siparisSchema.isValid(siparis).then((valid) => setButtonDisable(!valid));
     }, [siparis]);
 
     const [siparisError, setSiparisError] = useState({
@@ -40,7 +40,7 @@ export default function FormData() {
 
     function handleError(name, value) {
 
-        Yup.reach(formSchema, name)
+        Yup.reach(siparisSchema, name)
             .validate(value)
             .then(() => {
                 setSiparisError({
