@@ -5,6 +5,7 @@ import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
 import { useEffect } from "react"
 import * as Yup from 'yup';
+import {useHistory} from 'react-router-dom';
 
 const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinyağı']
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
@@ -70,12 +71,15 @@ export default function FormData() {
 
     console.log(siparis)
 
+    const history = useHistory();
+
     function submit(event) {
         event.preventDefault();
 
         axios.post('https://reqres.in/api/orders', siparis)
           .then(function (response) {
             console.log(response);
+            history.push('/confirmation');
           })
           .catch(function (error) {
             console.log(error);
@@ -175,9 +179,7 @@ export default function FormData() {
 
                 <div>
                     <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
-                    <Link to="/confirmation">
                         <button type="submit" className="margin" disabled={buttonDisable}>Siparişi tamamla</button>
-                    </Link>
                     <button type="button" onClick={reset}>Temizle</button>
                 </div>
                 
