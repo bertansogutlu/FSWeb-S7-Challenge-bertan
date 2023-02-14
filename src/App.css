@@ -101,3 +101,11 @@
 .formBody img {
     width: 100%;
 }
+
+.siparis {
+    width: 25%;
+    margin: auto;
+    
+    background-color: red;
+    padding: 1rem;
+}
