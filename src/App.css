@@ -54,10 +54,11 @@
 }
 
 .input {
-    margin: 2rem;
-    scale: 2;
+    font-size: 1rem;
+    padding: 0.6rem;
+    margin: 0.5rem;
     border-color: #ea004b;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 
 .header {
@@ -147,4 +148,8 @@
     background-color: #ea004b;
     padding: 1rem;
     text-align: center;
+}
+
+input {
+    accent-color: #ea004b;
 }

@@ -19,7 +19,7 @@ export default function Confirmation({ siparisData }) {
                 Pizza boyutu: {siparisData.boyut}
                 </p>
                 <p className="bold margin">
-                Pizza sosu: {siparisData.sos}
+                Sos seçimi: {siparisData.sos}
                 </p>
                 <p className="bold margin">
                 Özel istek: {siparisData["özel"]}
