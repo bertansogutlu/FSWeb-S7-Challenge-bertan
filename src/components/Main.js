@@ -22,7 +22,7 @@ export default function Main() {
                         <img src={e.img} className="margin" alt={`{e.name} fotoğrafı`} />
                         <div>
                             <h3 className="margin bold">{e.name}</h3>
-                            <button name={e.name} className="margin button">Restorana git</button>
+                            <button name={e.name} className="margin button">Restorana Git</button>
                         </div>
                     </div>
                 )}

@@ -6,6 +6,12 @@
 	border-radius: 1rem;
 	font-weight: bold;
     border: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: rgb(234, 0, 75, .2);
+    color: #ea004b;
 }
 
 .center {
@@ -87,8 +93,16 @@
 	margin-bottom: 5vh;
 }
 
+.mainBody div {
+    text-align: center;
+}
+
 .mainBody img {
     border-radius: 2rem;
+}
+
+.mainBody h3 {
+    font-size: 1.2rem;
 }
 
 
