@@ -17,7 +17,7 @@ const App = () => {
         <Main />
       </Route>
       <Route exact path="/pizza">
-        <Form siparisData={siparisData} setSiparisData={setSiparisData}/>
+        <Form setSiparisData={setSiparisData}/>
       </Route>
       <Route exact path="/confirmation">
         <Confirmation siparisData={siparisData}/>

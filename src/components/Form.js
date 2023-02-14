@@ -22,7 +22,7 @@ const siparisSchema = Yup.object({
 
 
 
-export default function FormData({ siparisData, setSiparisData }) {
+export default function FormData({ setSiparisData }) {
 
     const initial = { isim: '', boyut: '', sos: '', malzeme1: false, malzeme2: false, malzeme3: false, malzeme4: false, malzeme5: false, malzeme6: false, malzeme7: false, malzeme8: false, malzeme9: false, malzeme10: false, un: false, özel: '', adet: 0 };
     const [siparis, setSiparis] = useState(initial);
