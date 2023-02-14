@@ -12,7 +12,7 @@ export default function Main() {
             <div className="mainPhoto">
                 <img src={pizzaImg} alt="pizza fotoğrafı" />
                 <Link to="/pizza">
-                    <div class="centered">Favori restoranına git</div>
+                    <button>Favori restoranına git</button>
                 </Link>
             </div>
 
