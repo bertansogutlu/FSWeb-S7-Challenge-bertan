@@ -3,13 +3,20 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
+import { useEffect } from "react"
 import * as Yup from 'yup';
 
 const soslar = ['Pizza sosu', 'Sarımsak sos', 'Meksika acısı', 'Ege zeytinyağı']
 const malzemeler = ['Kaşar', 'Mozzarella', 'Mantar', 'Mısır', 'Biber', 'Zeytin', 'Jalapeño', 'Salam', 'Sucuk', 'Pepperoni']
 
 const formSchema = Yup.object({
-    isim: Yup.string().required("Bu alan gereklidir").min(2, "İsim en az 2 karakter olmalıdır")
+    isim: Yup
+    .string()
+    .required("Bu alan zorunludur")
+    .matches(
+        /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+        'Sadece latin harfleri kullanınız'
+    ),
 });
 
 
@@ -18,22 +25,36 @@ export default function FormData() {
 
     const initial = { isim: '', boyut: '', sos: '', malzeme1: false, malzeme2: false, malzeme3: false, malzeme4: false, malzeme5: false, malzeme6: false, malzeme7: false, malzeme8: false, malzeme9: false, malzeme10: false, un: false, özel: '', adet: 0 };
     const [siparis, setSiparis] = useState(initial);
-    const [isimError, setIsimError] = useState([])
     const { isim, boyut, sos, un, özel, adet } = siparis;
+    const [buttonDisable, setButtonDisable] = useState(true);
+
+    useEffect(() => {
+        formSchema.isValid(siparis).then((valid) => setButtonDisable(!valid));
+    }, [siparis]);
+
+    const [siparisError, setSiparisError] = useState({
+        isim: "",
+    });
+
 
     function handleError(name, value) {
 
         Yup.reach(formSchema, name)
             .validate(value)
             .then(() => {
-                setIsimError("")
+                setSiparisError({
+                    ...siparisError,
+                    [name]: ""
+                });
             })
-            .catch((err) => {
-                setIsimError(err.errors)
+            .catch((error) => {
+                setSiparisError({
+                    ...siparisError,
+                    [name]: error.errors[0]
+                });
             })
-    }
 
-    console.log(isimError)
+    }
 
     function handleChange(event) {
         console.log(event.target.name, event.target.value)
@@ -77,7 +98,7 @@ export default function FormData() {
 
                     <label>
                         <input type="text" className="margin" name="isim" value={isim} onChange={handleChange} />
-                        <p className="margin" style={{ color: "red" }}>{isimError}</p>
+                        {siparisError.isim !== "" && <div style={{ color: "red", display: "inline", marginLeft: "0.5rem" }}>{siparisError.isim}</div>}
                     </label>
                 </div>
 
@@ -154,7 +175,7 @@ export default function FormData() {
                 <div>
                     <input type="number" name="adet" min="0" max="10" className="margin" value={adet} onChange={handleChange} />
                     <Link to="/confirmation">
-                        <button type="submit" className="margin">Siparişi tamamla</button>
+                        <button type="submit" className="margin" disabled={buttonDisable}>Siparişi tamamla</button>
                     </Link>
                     <button type="button" onClick={reset}>Temizle</button>
                 </div>
