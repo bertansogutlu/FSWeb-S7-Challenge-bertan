@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import axios from "axios"
 import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
