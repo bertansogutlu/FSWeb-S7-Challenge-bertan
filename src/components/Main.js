@@ -22,7 +22,7 @@ export default function Main() {
                                 <img src={`https://picsum.photos/id/${i}/400/300`} className="margin" alt={`{e} fotoğrafı`}/>
                                 <div>
                                 <h3 className="margin bold">{e}</h3>
-                                <button name={e} className="margin">Restorana git</button>
+                                <button name={e} className="margin button">Restorana git</button>
                                 </div>
                             </div>
                         )}

@@ -1,6 +1,10 @@
 .button {
-    width: 4rem;
+	padding: 0.5rem;
 	margin: 0.5rem;
+	background-color: red;
+	color: white;
+	border-radius: 1rem;
+	font-weight: bold;
 }
 
 .center {
@@ -53,6 +57,10 @@
     width: 6rem;
 }
 
+.header .button {
+	width: 4rem;
+}
+
 .mainPhoto img {
     width: 100%;
 	height: 50vh;
@@ -76,6 +84,11 @@
 	justify-content: space-evenly;
 	margin-bottom: 5vh;
 }
+
+.mainBody img {
+    border-radius: 2rem;
+}
+
 
 .formBody {
     margin: auto;
