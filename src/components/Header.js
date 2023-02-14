@@ -6,7 +6,7 @@ export default function MainHeader() {
 
     return (
             <div className="header">
-                  <h2>Techno Eats</h2>
+                  <h2>YiYoo</h2>
                 <div>
                     <Link to="/">
                         <button className="button">

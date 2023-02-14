@@ -1,10 +1,11 @@
 .button {
-	padding: 0.5rem;
+	padding: 1rem;
 	margin: 0.5rem;
-	background-color: red;
+	background-color: #ea004b;
 	color: white;
 	border-radius: 1rem;
 	font-weight: bold;
+    border: none;
 }
 
 .center {
@@ -53,12 +54,13 @@
 }
 
 .header h2 {
+    font-size: 2rem;
     font-weight: bold;
     width: 6rem;
 }
 
 .header .button {
-	width: 4rem;
+	width: 6rem;
 }
 
 .mainPhoto img {
