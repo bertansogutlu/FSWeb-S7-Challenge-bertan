@@ -1,6 +1,5 @@
 import React from "react"
 import axios from "axios"
-import pizzaImg from "../img/Pizza.png"
 import { useState } from "react"
 import { useEffect } from "react"
 import * as Yup from 'yup';
@@ -93,7 +92,7 @@ export default function FormData({ setSiparisData }) {
             <form onSubmit={submit} className="formBody">
 
                 <h3 className="center padding bold">Kendi pizzanızı yapın</h3>
-                <img src={pizzaImg} alt="pizza fotoğrafı" />
+                <img src="https://images.deliveryhero.io/image/fd-tr/LH/ilnl-hero.jpg?width=2000&height=500&quality=45" alt="pizza fotoğrafı" />
                 <h3 className="padding bold">Haydi başlayalım</h3>
 
                 <div>
