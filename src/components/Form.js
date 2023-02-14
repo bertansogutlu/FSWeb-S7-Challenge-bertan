@@ -102,7 +102,7 @@ export default function FormData({ setSiparisData }) {
 
                     <label>
                         <input type="text" className="margin" name="isim" value={isim} onChange={handleChange} />
-                        {siparisError.isim !== "" && <div style={{ color: "red", display: "inline", marginLeft: "0.5rem" }}>{siparisError.isim}</div>}
+                        {siparisError.isim !== "" && <div style={{ color: "#ea004b", display: "inline", marginLeft: "0.5rem" }}>{siparisError.isim}</div>}
                     </label>
                 </div>
 
