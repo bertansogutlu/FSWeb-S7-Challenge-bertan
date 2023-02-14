@@ -2,7 +2,7 @@ import React from "react"
 import pizzaImg from "../img/Pizza.jpg"
 
 
-export default function Confirmation() {
+export default function Confirmation({siparisData}) {
 
     return (
         <section className="main">
@@ -11,7 +11,7 @@ export default function Confirmation() {
                 <img src={pizzaImg} alt="pizza fotoğrafı"/>
                 <div class="centered">Tebrikler! Pizza'nız yola çıktı</div>
             </div>
-
+            <div>Hey {siparisData.isim}</div>
         </section>
     )
 }

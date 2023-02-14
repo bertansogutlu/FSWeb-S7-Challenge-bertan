@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Form from "./components/Form";
@@ -7,7 +7,9 @@ import MainHeader from "./components/Header"
 import Confirmation from "./components/Confirmation";
 
 
+
 const App = () => {
+  const [siparisData, setSiparisData] = useState ({})
   return (
     <BrowserRouter>
       <MainHeader />
@@ -15,10 +17,10 @@ const App = () => {
         <Main />
       </Route>
       <Route exact path="/pizza">
-        <Form />
+        <Form siparisData={siparisData} setSiparisData={setSiparisData}/>
       </Route>
       <Route exact path="/confirmation">
-        <Confirmation />
+        <Confirmation siparisData={siparisData}/>
       </Route>
     </BrowserRouter>
   );
