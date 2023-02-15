@@ -127,7 +127,7 @@ export default function FormData({ setSiparisData }) {
 
                     <div>
                         {soslar.map((e, i) =>
-                            <div>
+                            <div key={`sos${i}`}>
                                 <label>
                                     <input type="radio" className="margin" name="sos" value={e} checked={sos === `${e}`} onChange={handleChange} />
                                     {e}
@@ -145,9 +145,9 @@ export default function FormData({ setSiparisData }) {
 
                     <div className="flex">
                         {malzemeler.map((e, i) =>
-                            <div className="half">
+                            <div key={`malzeme${i+1}}`} className="half">
                                 <label>
-                                    <input type="checkbox" className="margin" name={`malzeme${i + 1}`} value={e} checked={siparis[`malzeme${i + 1}`]} onChange={handleChange} />
+                                    <input type="checkbox" className="margin" name={`malzeme${i+1}`} value={e} checked={siparis[`malzeme${i+1}`]} onChange={handleChange} />
                                     {e}
                                 </label>
                             </div>
