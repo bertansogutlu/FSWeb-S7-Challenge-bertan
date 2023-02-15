@@ -9,20 +9,20 @@ import Confirmation from "./components/Confirmation";
 
 
 const App = () => {
-  const [siparisData, setSiparisData] = useState ({})
+  const [siparisData, setSiparisData] = useState({})
   return (
     <BrowserRouter>
       <MainHeader />
       <Switch>
-      <Route exact path="/">
-        <Main />
-      </Route>
-      <Route exact path="/pizza">
-        <Form setSiparisData={setSiparisData}/>
-      </Route>
-      <Route exact path="/confirmation">
-        <Confirmation siparisData={siparisData}/>
-      </Route>
+        <Route exact path="/">
+          <Main />
+        </Route>
+        <Route exact path="/pizza">
+          <Form setSiparisData={setSiparisData} />
+        </Route>
+        <Route exact path="/confirmation">
+          <Confirmation siparisData={siparisData} />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
