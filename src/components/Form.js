@@ -96,7 +96,7 @@ export default function FormData({ setSiparisData }) {
                 <h3 className="padding bold">Haydi başlayalım</h3>
 
                 <div>
-                    <div className="grey">
+                    <div className="color">
                         <h3 className="padding bold">İsminiz</h3>
                     </div>
 
@@ -107,7 +107,7 @@ export default function FormData({ setSiparisData }) {
                 </div>
 
                 <div>
-                    <div className="grey">
+                    <div className="color">
                         <h3 className="padding bold">Boyut seçimi</h3>
                         <p className="padding">Gerekli</p>
                     </div>
@@ -120,7 +120,7 @@ export default function FormData({ setSiparisData }) {
                 </div>
 
                 <div>
-                    <div className="grey">
+                    <div className="color">
                         <h3 className="padding bold">Sos seçimi</h3>
                         <p className="padding">Gerekli</p>
                     </div>
@@ -138,7 +138,7 @@ export default function FormData({ setSiparisData }) {
                 </div>
 
                 <div>
-                    <div className="grey">
+                    <div className="color">
                         <h3 className="padding bold">Malzeme seçimi</h3>
                         <p className="padding">10 malzemeye kadar</p>
                     </div>
@@ -156,7 +156,7 @@ export default function FormData({ setSiparisData }) {
                 </div>
 
                 <div>
-                    <div className="grey">
+                    <div className="color">
                         <h3 className="padding bold">Sağlınıza önem veriyoruz</h3>
                     </div>
 
@@ -167,7 +167,7 @@ export default function FormData({ setSiparisData }) {
                 </div>
 
                 <div>
-                    <div className="grey">
+                    <div className="color">
                         <h3 className="padding bold">Özel bir isteğiniz var mı?</h3>
                     </div>
 
