@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Form from "./components/Form";
 import Main from "./components/Main";
@@ -13,6 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <MainHeader />
+      <Switch>
       <Route exact path="/">
         <Main />
       </Route>
@@ -22,6 +23,7 @@ const App = () => {
       <Route exact path="/confirmation">
         <Confirmation siparisData={siparisData}/>
       </Route>
+      </Switch>
     </BrowserRouter>
   );
 };
