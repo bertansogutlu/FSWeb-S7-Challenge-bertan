@@ -129,6 +129,8 @@
     margin-bottom: 5vh;
     border-radius: 1rem;
     color: #ea004b;
+    height: 85vh;
+    overflow: auto;
 }
 
 .formBody label {
