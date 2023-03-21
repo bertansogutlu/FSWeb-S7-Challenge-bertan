@@ -74,7 +74,7 @@ export default function FormData({ setSiparisData }) {
     function submit(event) {
         event.preventDefault();
 
-        axios.post('https://reqres.in/api/orders', siparis)
+        !buttonDisable && axios.post('https://reqres.in/api/orders', siparis)
             .then(function (response) {
                 console.log(response);
                 setSiparisData(response.data);
